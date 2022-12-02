@@ -1,4 +1,6 @@
-﻿namespace RealStateApi.Models
+﻿using System.Text.Json.Serialization;
+
+namespace RealStateApi.Models
 {
     public class Property
     {
@@ -18,10 +20,12 @@
 
         public int CategoryId { get; set; }
 
+        [JsonIgnore]
         public Category Category { get; set; }
 
         public int UserId { get; set; }
 
+        [JsonIgnore]
         public User User { get; set; }
 
 

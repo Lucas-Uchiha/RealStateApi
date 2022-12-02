@@ -30,6 +30,7 @@ namespace RealStateApi.Controllers
         }
 
         // GET api/<CategoriesDbController>/SortCategories
+        [HttpPost("[action]")]
         public IActionResult SortCategories()
         {
             return Ok(_dbContext.Categories.OrderByDescending(x => x.Name));
